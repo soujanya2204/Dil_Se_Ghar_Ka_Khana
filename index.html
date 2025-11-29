@@ -44,61 +44,66 @@
 
     <!-- HERO SECTION -->
     <section class="hero" id="hero" data-section>
-      <div class="container hero-content">
-        <div class="hero-left">
-          <div class="tagline">Pure Veg • Cloud Kitchen • Home-Cooked</div>
-          <h1>
-            <span>Dil Se</span> bana hua,<br />
-            bilkul <span>Ghar Ka Khana</span>.
-          </h1>
-          <p class="hero-sub">
-            Soulful, pure veg home-style food—just like Maa ke haath ka khana.
-            Fresh, hygienic, and delivered hot to your doorstep.
-          </p>
+      <div class="hero-parallax">
+        <div class="container hero-content">
+          <div class="hero-left">
+            <div class="tagline">Pure Veg • Cloud Kitchen • Home-Cooked</div>
+            <h1>
+              <span>Dil Se</span> bana hua,<br />
+              bilkul <span>Ghar Ka Khana</span>.
+            </h1>
+            <p class="hero-sub">
+              Soulful, pure veg home-style food—just like Maa ke haath ka khana.
+              Fresh, hygienic, and delivered hot to your doorstep.
+            </p>
 
-          <div class="hero-badges">
-            <div class="badge">100% Veg</div>
-            <div class="badge">No Preservatives</div>
-            <div class="badge">Daily Fresh Menu</div>
+            <div class="hero-badges">
+              <div class="badge">100% Veg</div>
+              <div class="badge">No Preservatives</div>
+              <div class="badge">Daily Fresh Menu</div>
+            </div>
+
+            <div class="hero-cta-group">
+              <button
+                class="btn-primary btn-pulse"
+                onclick="scrollToSection('menu')"
+              >
+                View Today’s Veg Menu
+              </button>
+              <button
+                class="btn-secondary"
+                onclick="scrollToSection('contact')"
+              >
+                Pre-Book Tiffin
+              </button>
+            </div>
+
+            <p class="hero-note">
+              Lunch & Dinner • Student- and office-friendly tiffin plans
+              available.
+            </p>
+
+            <div class="mini-info">
+              <span>📍 Local delivery only</span>
+              <span>⏰ Pre-booking recommended</span>
+            </div>
           </div>
 
-          <div class="hero-cta-group">
-            <button
-              class="btn-primary btn-pulse"
-              onclick="scrollToSection('menu')"
-            >
-              View Today’s Veg Menu
-            </button>
-            <button class="btn-secondary" onclick="scrollToSection('contact')">
-              Pre-Book Tiffin
-            </button>
-          </div>
+          <div class="hero-image">
+            <img
+              src="https://staging3.barbileats.com/wp-content/uploads/2025/01/indian-vegetarian-thali-5-jpg.webp"
+              alt="Ghar ki veg thali"
+              class="hero-photo"
+            />
 
-          <p class="hero-note">
-            Lunch & Dinner • Student- and office-friendly tiffin plans
-            available.
-          </p>
-
-          <div class="mini-info">
-            <span>📍 Local delivery only</span>
-            <span>⏰ Pre-booking recommended</span>
-          </div>
-        </div>
-
-        <div class="hero-image">
-          <img
-            src="https://staging3.barbileats.com/wp-content/uploads/2025/01/indian-vegetarian-thali-5-jpg.webp"
-            alt="Ghar ki veg thali"
-            class="hero-photo"
-          />
-
-          <div class="hero-plate">
-            Ghar ki thali, <br />
-            ab bas ek click door. 🍲
-          </div>
-          <div class="hero-sticker">
-            <span class="emoji">👩‍🍳</span>
-            <span>Made with Maa ka pyaar</span>
+            <div class="hero-plate">
+              Ghar ki thali, <br />
+              ab bas ek click door. 🍲
+            </div>
+            <div class="hero-sticker">
+              <span class="emoji">👩‍🍳</span>
+              <span>Made with Maa ka pyaar</span>
+            </div>
           </div>
         </div>
       </div>
@@ -171,7 +176,12 @@
         </div>
 
         <div class="menu-grid">
-          <div class="menu-card" data-category="tiffin">
+          <div
+            class="menu-card"
+            data-category="tiffin"
+            data-item="Ghar Wali Thali"
+            data-price="120"
+          >
             <span class="menu-tag">Best Seller</span>
             <div class="menu-img">
               <img
@@ -185,13 +195,21 @@
             </div>
             <div class="menu-meta">
               <span class="menu-price">₹120</span>
-              <button class="menu-btn" onclick="selectItem('Ghar Wali Thali')">
+              <button
+                class="menu-btn"
+                onclick="selectItem('Ghar Wali Thali', 120)"
+              >
                 Add to Order
               </button>
             </div>
           </div>
 
-          <div class="menu-card" data-category="light">
+          <div
+            class="menu-card"
+            data-category="light"
+            data-item="Khichdi with Curd"
+            data-price="90"
+          >
             <span class="menu-tag">Light & Satvik</span>
             <div class="menu-img">
               <img
@@ -208,14 +226,19 @@
               <span class="menu-price">₹90</span>
               <button
                 class="menu-btn"
-                onclick="selectItem('Khichdi with Curd')"
+                onclick="selectItem('Khichdi with Curd', 90)"
               >
                 Add to Order
               </button>
             </div>
           </div>
 
-          <div class="menu-card" data-category="paratha">
+          <div
+            class="menu-card"
+            data-category="paratha"
+            data-item="Aloo Paratha Combo"
+            data-price="80"
+          >
             <span class="menu-tag">Student Favourite</span>
             <div class="menu-img">
               <img
@@ -232,14 +255,19 @@
               <span class="menu-price">₹80</span>
               <button
                 class="menu-btn"
-                onclick="selectItem('Aloo Paratha Combo')"
+                onclick="selectItem('Aloo Paratha Combo', 80)"
               >
                 Add to Order
               </button>
             </div>
           </div>
 
-          <div class="menu-card" data-category="tiffin">
+          <div
+            class="menu-card"
+            data-category="tiffin"
+            data-item="Weekly Tiffin Plan"
+            data-price="600"
+          >
             <span class="menu-tag">Tiffin Plan</span>
             <div class="menu-img">
               <img
@@ -255,7 +283,7 @@
               <span class="menu-price">From ₹600</span>
               <button
                 class="menu-btn"
-                onclick="selectItem('Weekly Tiffin Plan')"
+                onclick="selectItem('Weekly Tiffin Plan', 600)"
               >
                 Enquire
               </button>
@@ -321,7 +349,7 @@
             </button>
             <div class="faq-answer">
               Yes, our kitchen is 100% vegetarian. We do not cook any non-veg or
-              egg items our kitchen.
+              egg items in our kitchen.
             </div>
           </div>
 
@@ -378,7 +406,7 @@
               “The food tastes exactly like my mom’s cooking. Light, veg and
               homely. Best option for students staying away from home.”
             </div>
-            <div class="testimonial-author">Rohit</div>
+            <div class="testimonial-author">Shubham</div>
             <div class="testimonial-meta">Student</div>
           </div>
 
@@ -387,7 +415,7 @@
               “I opted for a veg weekly tiffin and never had to worry about food
               after office. Consistent taste and quality.”
             </div>
-            <div class="testimonial-author">Neha</div>
+            <div class="testimonial-author">Sanket</div>
             <div class="testimonial-meta">Working Professional</div>
           </div>
 
@@ -396,7 +424,7 @@
               “Even my parents, who are very particular about food, liked it.
               Clean, simple and ghar jaisa veg khana.”
             </div>
-            <div class="testimonial-author">Ajay</div>
+            <div class="testimonial-author">Shalinee</div>
             <div class="testimonial-meta">Customer</div>
           </div>
         </div>
@@ -499,6 +527,44 @@
         </div>
       </div>
     </section>
+
+    <!-- ORDER SUMMARY DRAWER -->
+    <div id="orderSummary" class="order-summary">
+      <div class="order-summary-header">
+        <div>
+          <span class="order-summary-title">Your Veg Order</span>
+          <span class="order-summary-subtitle">Dil se ghar ka khana 🫶</span>
+        </div>
+        <button
+          id="orderSummaryToggle"
+          class="order-summary-toggle"
+          title="Collapse"
+        >
+          ▾
+        </button>
+      </div>
+      <div class="order-summary-body">
+        <ul id="orderItems" class="order-items"></ul>
+        <div class="order-summary-footer">
+          <div class="order-total-row">
+            <span>Total (approx):</span>
+            <span id="orderTotal">₹0</span>
+          </div>
+          <div class="order-summary-actions">
+            <button id="clearOrderBtn" class="btn-secondary order-clear-btn">
+              Clear
+            </button>
+            <button
+              class="btn-primary order-go-btn"
+              type="button"
+              onclick="scrollToSection('contact')"
+            >
+              Go to Order Form
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- SCROLL TO TOP BUTTON -->
     <button id="scrollTopBtn" class="scroll-top-btn" title="Back to top">
