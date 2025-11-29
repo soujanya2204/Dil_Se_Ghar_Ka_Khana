@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dil Se Ghar Ka Khana | Pure Veg Cloud Kitchen</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- HEADER / NAVBAR -->
+    <header>
+      <div class="container nav">
+        <div class="logo">
+          <span class="heart">❤️</span>
+          <span>Dil Se Ghar Ka Khana</span>
+          <span class="veg-dot" title="Pure Veg"></span>
+        </div>
+
+        <nav>
+          <div class="menu-toggle" id="menuToggle">☰</div>
+          <div class="nav-links" id="navLinks">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#how-it-works" class="nav-link">How It Works</a>
+            <a href="#faq" class="nav-link">FAQ</a>
+            <a href="#contact" class="nav-link">Order</a>
+          </div>
+        </nav>
+
+        <div class="nav-right">
+          <div class="veg-label" title="Pure Vegetarian Kitchen">
+            <span class="veg-dot"></span> Pure Veg
+          </div>
+          <button id="themeToggle" class="theme-toggle" title="Toggle theme">
+            🌙
+          </button>
+          <button class="nav-cta" onclick="scrollToSection('contact')">
+            Order Now
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero" data-section>
+      <div class="container hero-content">
+        <div class="hero-left">
+          <div class="tagline">Pure Veg • Cloud Kitchen • Home-Cooked</div>
+          <h1>
+            <span>Dil Se</span> bana hua,<br />
+            bilkul <span>Ghar Ka Khana</span>.
+          </h1>
+          <p class="hero-sub">
+            Soulful, pure veg home-style food—just like Maa ke haath ka khana.
+            Fresh, hygienic, and delivered hot to your doorstep.
+          </p>
+
+          <div class="hero-badges">
+            <div class="badge">100% Veg</div>
+            <div class="badge">No Preservatives</div>
+            <div class="badge">Daily Fresh Menu</div>
+          </div>
+
+          <div class="hero-cta-group">
+            <button
+              class="btn-primary btn-pulse"
+              onclick="scrollToSection('menu')"
+            >
+              View Today’s Veg Menu
+            </button>
+            <button class="btn-secondary" onclick="scrollToSection('contact')">
+              Pre-Book Tiffin
+            </button>
+          </div>
+
+          <p class="hero-note">
+            Lunch & Dinner • Student- and office-friendly tiffin plans
+            available.
+          </p>
+
+          <div class="mini-info">
+            <span>📍 Local delivery only</span>
+            <span>⏰ Pre-booking recommended</span>
+          </div>
+        </div>
+
+        <div class="hero-image">
+          <img
+            src="https://staging3.barbileats.com/wp-content/uploads/2025/01/indian-vegetarian-thali-5-jpg.webp"
+            alt="Ghar ki veg thali"
+            class="hero-photo"
+          />
+
+          <div class="hero-plate">
+            Ghar ki thali, <br />
+            ab bas ek click door. 🍲
+          </div>
+          <div class="hero-sticker">
+            <span class="emoji">👩‍🍳</span>
+            <span>Made with Maa ka pyaar</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" data-section>
+      <div class="container">
+        <h2 class="section-title">About Dil Se Ghar Ka Khana</h2>
+        <p class="section-subtitle">
+          A small pure-veg home kitchen with a big heart, serving soulful food.
+        </p>
+
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              “Dil Se Ghar Ka Khana” is a pure vegetarian cloud kitchen run from
+              home. Every dish is freshly prepared using clean ingredients—
+              exactly how we cook for our own family.
+            </p>
+            <p>
+              Whether you’re a student, working professional, or someone missing
+              ghar ka swaad, our food is designed to be light, comforting and
+              homely.
+            </p>
+
+            <div class="about-highlight">
+              Why people love our food:
+              <ul class="about-list">
+                <li>100% vegetarian, no egg, no meat.</li>
+                <li>Less oil, balanced masala, easy to digest.</li>
+                <li>Rotating menu so you never get bored.</li>
+                <li>Custom spice levels (mild / medium / spicy).</li>
+                <li>Special options for kids and elders.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <h3>Meet The Heart Behind The Kitchen</h3>
+            <div class="about-meta">Homestyle veg recipes • 100% Dil se</div>
+            <p>
+              Every sabzi, dal, roti and rice is prepared with the same warmth
+              and affection that goes into a family meal. No hotel-style masala,
+              no heaviness—sirf ghar ka taste.
+            </p>
+            <p style="margin-top: 0.6rem">
+              <strong>Specialities:</strong> Ghar-style dals, seasonal veg
+              sabzi, stuffed parathas, light khichdi, and simple curries that
+              give complete “ghar jaisa” satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" data-section>
+      <div class="container">
+        <h2 class="section-title">Today’s Veg Menu</h2>
+        <p class="section-subtitle">
+          Simple, rotating, pure veg menu inspired by everyday Indian home food.
+        </p>
+
+        <div class="menu-filters">
+          <button class="chip chip-active" data-filter="all">All</button>
+          <button class="chip" data-filter="light">Light Meals</button>
+          <button class="chip" data-filter="tiffin">Tiffin</button>
+          <button class="chip" data-filter="paratha">Paratha</button>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-card" data-category="tiffin">
+            <span class="menu-tag">Best Seller</span>
+            <div class="menu-img">
+              <img
+                src="https://www.foodiaq.com/wp-content/uploads/2025/06/Veg-Thali.jpg"
+                alt="Ghar Wali Thali"
+              />
+            </div>
+            <div class="menu-name">Ghar Wali Dal, Sabzi, Roti & Rice</div>
+            <div class="menu-desc">
+              Comfort combo with homely dal, seasonal veg sabzi, 4 rotis & rice.
+            </div>
+            <div class="menu-meta">
+              <span class="menu-price">₹120</span>
+              <button class="menu-btn" onclick="selectItem('Ghar Wali Thali')">
+                Add to Order
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="light">
+            <span class="menu-tag">Light & Satvik</span>
+            <div class="menu-img">
+              <img
+                src="https://holycowvegan.net/wp-content/uploads/2014/06/masala-khichdi-featured-image.jpg"
+                alt="Khichdi with Curd"
+              />
+            </div>
+            <div class="menu-name">Moong Dal Khichdi with Curd</div>
+            <div class="menu-desc">
+              Satvik, simple and gentle on the stomach. Perfect for light
+              dinner.
+            </div>
+            <div class="menu-meta">
+              <span class="menu-price">₹90</span>
+              <button
+                class="menu-btn"
+                onclick="selectItem('Khichdi with Curd')"
+              >
+                Add to Order
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="paratha">
+            <span class="menu-tag">Student Favourite</span>
+            <div class="menu-img">
+              <img
+                src="https://static.toiimg.com/thumb/msid-116197611,width-1280,height-720,resizemode-4/116197611.jpg"
+                alt="Aloo Paratha Combo"
+              />
+            </div>
+            <div class="menu-name">Aloo Paratha with Dahi & Achar</div>
+            <div class="menu-desc">
+              2 stuffed aloo parathas with curd & homemade achar. Filling &
+              tasty.
+            </div>
+            <div class="menu-meta">
+              <span class="menu-price">₹80</span>
+              <button
+                class="menu-btn"
+                onclick="selectItem('Aloo Paratha Combo')"
+              >
+                Add to Order
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-card" data-category="tiffin">
+            <span class="menu-tag">Tiffin Plan</span>
+            <div class="menu-img">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkKdFJEm27RzNtnA0JhZ9bULOA-7-3dfxobg&s"
+                alt="Weekly Tiffin Plan"
+              />
+            </div>
+            <div class="menu-name">Weekly Pure Veg Tiffin (Lunch/Dinner)</div>
+            <div class="menu-desc">
+              5 days tiffin: dal, veg sabzi, roti/rice. Customisable on request.
+            </div>
+            <div class="menu-meta">
+              <span class="menu-price">From ₹600</span>
+              <button
+                class="menu-btn"
+                onclick="selectItem('Weekly Tiffin Plan')"
+              >
+                Enquire
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" data-section>
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">
+          Simple 3-step process to enjoy pure veg ghar ka khana at your
+          doorstep.
+        </p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-title">Choose Your Meal</div>
+            <p>
+              Pick from today’s veg menu or select a weekly tiffin plan
+              according to your routine.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-title">Place Your Order</div>
+            <p>
+              Place your order via the form or WhatsApp. We confirm and share an
+              approx. delivery time.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-title">Fresh Food Delivered</div>
+            <p>
+              Your meal is cooked fresh (pure veg) and delivered warm to your
+              location within our service area.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" data-section>
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Doubts about tiffin, delivery or customisation? Check here.
+        </p>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              Is the kitchen completely vegetarian?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes, our kitchen is 100% vegetarian. We do not cook any non-veg or
+              egg items our kitchen.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How do I book a weekly tiffin?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              You can use the order form and select “Weekly Tiffin Plan” or send
+              us a direct WhatsApp message. We will confirm the start date, time
+              slot and custom preferences.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              Can I request less spicy or no onion/garlic food?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              Yes, you can mention your preferences (less oil, less spice, no
+              onion/garlic, etc.) in the notes section. We try our best to
+              follow such requirements.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              How early should I place my order?
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              For daily meals, please place your order at least 1–2 hours in
+              advance. For weekly tiffin or bulk orders, a day’s notice is
+              ideal.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" data-section>
+      <div class="container">
+        <h2 class="section-title">What Customers Say</h2>
+        <p class="section-subtitle">
+          Real feedback from people who missed home—and found it in our food.
+        </p>
+
+        <div class="testimonials">
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              “The food tastes exactly like my mom’s cooking. Light, veg and
+              homely. Best option for students staying away from home.”
+            </div>
+            <div class="testimonial-author">Rohit</div>
+            <div class="testimonial-meta">Student</div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              “I opted for a veg weekly tiffin and never had to worry about food
+              after office. Consistent taste and quality.”
+            </div>
+            <div class="testimonial-author">Neha</div>
+            <div class="testimonial-meta">Working Professional</div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-text">
+              “Even my parents, who are very particular about food, liked it.
+              Clean, simple and ghar jaisa veg khana.”
+            </div>
+            <div class="testimonial-author">Ajay</div>
+            <div class="testimonial-meta">Customer</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / ORDER SECTION -->
+    <section id="contact" data-section>
+      <div class="container">
+        <h2 class="section-title">Place Your Order</h2>
+        <p class="section-subtitle">
+          Fill in your details and we’ll confirm your order on WhatsApp.
+        </p>
+
+        <div class="contact-grid">
+          <form id="orderForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone *</label>
+                <input type="tel" id="phone" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="meal">Preferred Meal *</label>
+                <select id="meal" required>
+                  <option value="">Select an option</option>
+                  <option value="Ghar Wali Thali">Ghar Wali Thali</option>
+                  <option value="Khichdi with Curd">Khichdi with Curd</option>
+                  <option value="Aloo Paratha Combo">Aloo Paratha Combo</option>
+                  <option value="Weekly Tiffin Plan">Weekly Tiffin Plan</option>
+                  <option value="Custom Request">Custom Request</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="time">Meal Time *</label>
+                <select id="time" required>
+                  <option value="">Select slot</option>
+                  <option value="Lunch">Lunch</option>
+                  <option value="Dinner">Dinner</option>
+                  <option value="Both">Both (Tiffin)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="address">Delivery Address *</label>
+              <textarea id="address" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="notes"
+                >Additional Notes (spice level, no onion/garlic, etc.)</label
+              >
+              <textarea
+                id="notes"
+                placeholder="Any special instructions?"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary full-width">
+              Submit Order Request on WhatsApp
+            </button>
+
+            <p
+              id="formMessage"
+              class="hero-note"
+              style="margin-top: 0.6rem"
+            ></p>
+          </form>
+
+          <div class="contact-info">
+            <p>
+              We currently deliver within our local area. Please mention your
+              exact address and nearest landmark for smooth delivery.
+            </p>
+            <div class="contact-highlight">
+              <strong>Timings:</strong><br />
+              Lunch: 12:30 PM – 3:00 PM<br />
+              Dinner: 7:30 PM – 10:00 PM<br /><br />
+              <strong>Note:</strong> Pure veg kitchen. Pre-booking recommended
+              for large / tiffin orders.
+            </div>
+
+            <a
+              class="whatsapp-link"
+              href="https://wa.me/919078799890"
+              target="_blank"
+            >
+              💬 Chat directly on WhatsApp
+            </a>
+
+            <p style="margin-top: 0.7rem; font-size: 0.85rem"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCROLL TO TOP BUTTON -->
+    <button id="scrollTopBtn" class="scroll-top-btn" title="Back to top">
+      ↑
+    </button>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-content">
+        <div>
+          © <span id="year"></span> Dil Se Ghar Ka Khana • Pure Veg Kitchen
+        </div>
+        <div class="footer-links">
+          <span>Homely</span>
+          <span>Hygienic</span>
+          <span>Dil Se</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
